@@ -1,4 +1,4 @@
-# Project-Rio-Scripts
+# project-rio-scripts
 This set of scripts all pertains to the Project Rio client, which is a client made for Mario Superstar Baseball (MSSB). The developers of the client added features such as stat tracking by reading the game's memory, outputted via JSON file. Recently, they created a RESTful API to upload statfiles to so that users could readily access their information. 
 
 ## project-rio-discord-bot
