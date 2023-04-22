@@ -1,0 +1,1072 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome8",
+    "definitions": {
+        "Welcome8": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "GameID": {
+                    "type": "string"
+                },
+                "Date - Start": {
+                    "type": "string"
+                },
+                "Date - End": {
+                    "type": "string"
+                },
+                "Ranked": {
+                    "type": "integer",
+                    "enum": [0, 1]
+                },
+                "Netplay": {
+                    "type": "integer",
+                    "enum": [0, 1]
+                },
+                "StadiumID": {
+                    "type": "string",
+                    "enum": [
+                        "Mario Stadium",
+                        "DK's Jungle",
+                        "Bowser's Castle",
+                        "Wario's Palace",
+                        "Peach's Garden",
+                        "Yoshi's Island",
+                        "Toy Field"
+                    ]
+                },
+                "Away Player": {
+                    "type": "string"
+                },
+                "Home Player": {
+                    "type": "string"
+                },
+                "Away Score": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Home Score": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Innings Selected": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 9
+                },
+                "Innings Played": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Quitter Team": {
+                    "type": "string"
+                },
+                "Average Ping": {
+                    "type": "integer"
+                },
+                "Lag Spikes": {
+                    "type": "integer"
+                },
+                "Version": {
+                    "type": "string"
+                },
+                "Character Game Stats": {
+                    "$ref": "#/definitions/CharacterGameStats"
+                },
+                "Events": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Event"
+                    }
+                }
+            },
+            "required": [
+                "Average Ping",
+                "Away Player",
+                "Away Score",
+                "Character Game Stats",
+                "Date - End",
+                "Date - Start",
+                "Events",
+                "GameID",
+                "Home Player",
+                "Home Score",
+                "Innings Played",
+                "Innings Selected",
+                "Lag Spikes",
+                "Netplay",
+                "Quitter Team",
+                "Ranked",
+                "StadiumID",
+                "Version"
+            ],
+            "title": "Welcome8"
+        },
+        "CharacterGameStats": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Team 0 Roster 0": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 0 Roster 1": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 0 Roster 2": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 0 Roster 3": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 0 Roster 4": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 0 Roster 5": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 0 Roster 6": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 0 Roster 7": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 0 Roster 8": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 1 Roster 0": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 1 Roster 1": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 1 Roster 2": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 1 Roster 3": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 1 Roster 4": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 1 Roster 5": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 1 Roster 6": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 1 Roster 7": {
+                    "$ref": "#/definitions/IndivCharStats"
+                },
+                "Team 1 Roster 8": {
+                    "$ref": "#/definitions/IndivCharStats"
+                }
+            },
+            "required": [
+                "Team 0 Roster 0",
+                "Team 0 Roster 1",
+                "Team 0 Roster 2",
+                "Team 0 Roster 3",
+                "Team 0 Roster 4",
+                "Team 0 Roster 5",
+                "Team 0 Roster 6",
+                "Team 0 Roster 7",
+                "Team 0 Roster 8",
+                "Team 1 Roster 0",
+                "Team 1 Roster 1",
+                "Team 1 Roster 2",
+                "Team 1 Roster 3",
+                "Team 1 Roster 4",
+                "Team 1 Roster 5",
+                "Team 1 Roster 6",
+                "Team 1 Roster 7",
+                "Team 1 Roster 8"
+            ],
+            "title": "CharacterGameStats"
+        },
+        "IndivCharStats": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Team": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "RosterID": {
+                    "type": "integer"
+                },
+                "CharID": {
+                    "$ref": "#/definitions/CharID"
+                },
+                "Superstar": {
+                    "type": "integer"
+                },
+                "Captain": {
+                    "type": "integer"
+                },
+                "Fielding Hand": {
+                    "$ref": "#/definitions/BattingHand"
+                },
+                "Batting Hand": {
+                    "$ref": "#/definitions/BattingHand"
+                },
+                "Defensive Stats": {
+                    "$ref": "#/definitions/DefensiveStats"
+                },
+                "Offensive Stats": {
+                    "$ref": "#/definitions/OffensiveStats"
+                    }
+            },
+            "required": [
+                "Batting Hand",
+                "Captain",
+                "CharID",
+                "Defensive Stats",
+                "Fielding Hand",
+                "Offensive Stats",
+                "RosterID",
+                "Superstar",
+                "Team"
+            ],
+            "title": "IndivCharStats"
+        },
+        "DefensiveStats": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Batters Faced": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Runs Allowed": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Earned Runs": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Batters Walked": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Batters Hit": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Hits Allowed": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "HRs Allowed": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Pitches Thrown": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Stamina": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Was Pitcher": {
+                    "type": "integer",
+                    "enum": [0, 1]
+                },
+                "Strikeouts": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Star Pitches Thrown": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Big Plays": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Outs Pitched": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Batters Per Position": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PerPosition"
+                    }
+                },
+                "Batter Outs Per Position": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PerPosition"
+                    }
+                },
+                "Outs Per Position": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PerPosition"
+                    }
+                }
+            },
+            "required": [
+                "Batter Outs Per Position",
+                "Batters Faced",
+                "Batters Hit",
+                "Batters Per Position",
+                "Batters Walked",
+                "Big Plays",
+                "Earned Runs",
+                "HRs Allowed",
+                "Hits Allowed",
+                "Outs Per Position",
+                "Outs Pitched",
+                "Pitches Thrown",
+                "Runs Allowed",
+                "Stamina",
+                "Star Pitches Thrown",
+                "Strikeouts",
+                "Was Pitcher"
+            ],
+            "title": "DefensiveStats"
+        },
+        "PerPosition": {
+            "type": "object",
+            "additionalProperties": false,
+            "patternProperties": {
+                "[A-Za-z0-9]+": {"type": "integer"}
+            },
+            "title": "PerPosition"
+        },
+        "OffensiveStats": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "At Bats": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Hits": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Singles": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Doubles": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Triples": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Homeruns": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Successful Bunts": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Sac Flys": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Strikeouts": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Walks (4 Balls)": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Walks (Hit)": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "RBI": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Bases Stolen": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Star Hits": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            },
+            "required": [
+                "At Bats",
+                "Hits",
+                "Singles",
+                "Doubles",
+                "Triples",
+                "Homeruns",
+                "Successful Bunts",
+                "Sac Flys",
+                "Strikeouts",
+                "Walks (4 Balls)",
+                "Walks (Hit)",
+                "RBI",
+                "Bases Stolen",
+                "Star Hits"
+            ],
+            "title": "OffensiveStats"
+        },
+        "Event": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Event Num": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Inning": {
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "Half Inning": {
+                    "type": "integer",
+                    "enum": [0, 1]
+                },
+                "Away Score": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Home Score": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Balls": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 3
+                },
+                "Strikes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 2
+                },
+                "Outs": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 2
+                },
+                "Star Chance": {
+                    "type": "integer",
+                    "enum": [0, 1]
+                },
+                "Away Stars": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 5
+                },
+                "Home Stars": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 5
+                },
+                "Pitcher Stamina": {
+                    "type": "integer",
+                    "maximum": 10
+                },
+                "Chemistry Links on Base": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 3
+                },
+                "Pitcher Roster Loc": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 8
+                },
+                "Batter Roster Loc": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 8
+                },
+                "Catcher Roster Loc": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 8
+                },
+                "RBI": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4
+                },
+                "Num Outs During Play": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 3
+                },
+                "Result of AB": {
+                    "$ref": "#/definitions/ResultOfAB"
+                },
+                "Runner Batter": {
+                    "$ref": "#/definitions/Runner"
+                },
+                "Pitch": {
+                    "$ref": "#/definitions/Pitch"
+                },
+                "Runner 1B": {
+                    "$ref": "#/definitions/Runner"
+                },
+                "Runner 2B": {
+                    "$ref": "#/definitions/Runner"
+                },
+                "Runner 3B": {
+                    "$ref": "#/definitions/Runner"
+                }
+            },
+            "required": [
+                "Away Score",
+                "Away Stars",
+                "Balls",
+                "Batter Roster Loc",
+                "Catcher Roster Loc",
+                "Chemistry Links on Base",
+                "Event Num",
+                "Half Inning",
+                "Home Score",
+                "Home Stars",
+                "Inning",
+                "Num Outs During Play",
+                "Outs",
+                "Pitcher Roster Loc",
+                "Pitcher Stamina",
+                "RBI",
+                "Result of AB",
+                "Runner Batter",
+                "Star Chance",
+                "Strikes"
+            ],
+            "title": "Event"
+        },
+        "Pitch": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Pitcher Team Id": {
+                    "type": "integer",
+                    "enum": [0, 1]
+                },
+                "Pitcher Char Id": {
+                    "$ref": "#/definitions/CharID"
+                },
+                "Pitch Type": {
+                    "$ref": "#/definitions/PitchType"
+                },
+                "Charge Type": {
+                    "$ref": "#/definitions/ChargeType"
+                },
+                "Star Pitch": {
+                    "type": "integer",
+                    "enum": [0, 1]
+                },
+                "Pitch Speed": {
+                    "type": "integer"
+                },
+                "Ball Position - Strikezone": {
+                    "type": "number"
+                },
+                "In Strikezone": {
+                    "type": "integer",
+                    "enum": [0, 1]
+                },
+                "DB": {
+                    "type": "integer",
+                    "enum": [0, 1]
+                },
+                "Type of Swing": {
+                    "$ref": "#/definitions/TypeOfSwing"
+                },
+                "Contact": {
+                    "$ref": "#/definitions/Contact"
+                }
+            },
+            "required": [
+                "Ball Position - Strikezone",
+                "Charge Type",
+                "DB",
+                "In Strikezone",
+                "Pitch Speed",
+                "Pitch Type",
+                "Pitcher Char Id",
+                "Pitcher Team Id",
+                "Star Pitch",
+                "Type of Swing"
+            ],
+            "title": "Pitch"
+        },
+        "Contact": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Type of Contact": {
+                    "$ref": "#/definitions/TypeOfContact"
+                },
+                "Charge Power Up": {
+                    "type": "number"
+                },
+                "Charge Power Down": {
+                    "type": "number"
+                },
+                "Star Swing Five-Star": {
+                    "type": "integer",
+                    "enum": [0, 1]
+                },
+                "Input Direction - Push/Pull": {
+                    "$ref": "#/definitions/InputDirectionPushPull"
+                },
+                "Input Direction - Stick": {
+                    "$ref": "#/definitions/StickInput"
+                },
+                "Frame of Swing Upon Contact": {
+                    "type": "string",
+                    "format": "integer",
+                    "minimum": 2,
+                    "maximum": 10
+                },
+                "Ball Power": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "Vert Angle": {
+                    "type": "string"
+                },
+                "Horiz Angle": {
+                    "type": "string"
+                },
+                "Contact Absolute": {
+                    "type": "number"
+                },
+                "Contact Quality": {
+                    "type": "number"
+                },
+                "RNG1": {
+                    "type": "string"
+                },
+                "RNG2": {
+                    "type": "string"
+                },
+                "RNG3": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "Ball Velocity - X": {
+                    "type": "number"
+                },
+                "Ball Velocity - Y": {
+                    "type": "number"
+                },
+                "Ball Velocity - Z": {
+                    "type": "number"
+                },
+                "Ball Contact Pos - X": {
+                    "type": "number"
+                },
+                "Ball Contact Pos - Y": {
+                    "type": "number"
+                },
+                "Ball Contact Pos - Z": {
+                    "type": "number"
+                },
+                "Bat Contact Pos - X": {
+                    "type": "number"
+                },
+                "Bat Contact Pos - Y": {
+                    "type": "number"
+                },
+                "Bat Contact Pos - Z": {
+                    "type": "number"
+                },
+                "Ball Landing Position - X": {
+                    "type": "number"
+                },
+                "Ball Landing Position - Y": {
+                    "type": "number"
+                },
+                "Ball Landing Position - Z": {
+                    "type": "number"
+                },
+                "Ball Max Height": {
+                    "type": "number"
+                },
+                "Ball Hang Time": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "Contact Result - Primary": {
+                    "$ref": "#/definitions/ContactResultPrimary"
+                },
+                "Contact Result - Secondary": {
+                    "$ref": "#/definitions/ContactResultSecondary"
+                },
+                "First Fielder": {
+                    "$ref": "#/definitions/FirstFielder"
+                }
+            },
+            "required": [
+                "Ball Contact Pos - X",
+                "Ball Contact Pos - Y",
+                "Ball Contact Pos - Z",
+                "Ball Hang Time",
+                "Ball Landing Position - X",
+                "Ball Landing Position - Y",
+                "Ball Landing Position - Z",
+                "Ball Max Height",
+                "Ball Power",
+                "Ball Velocity - X",
+                "Ball Velocity - Y",
+                "Ball Velocity - Z",
+                "Bat Contact Pos - X",
+                "Bat Contact Pos - Y",
+                "Bat Contact Pos - Z",
+                "Charge Power Down",
+                "Charge Power Up",
+                "Contact Absolute",
+                "Contact Quality",
+                "Contact Result - Primary",
+                "Contact Result - Secondary",
+                "Frame of Swing Upon Contact",
+                "Horiz Angle",
+                "Input Direction - Push/Pull",
+                "Input Direction - Stick",
+                "RNG1",
+                "RNG2",
+                "RNG3",
+                "Star Swing Five-Star",
+                "Type of Contact",
+                "Vert Angle"
+            ],
+            "title": "Contact"
+        },
+        "FirstFielder": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Fielder Roster Location": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 8
+                },
+                "Fielder Position": {
+                    "$ref": "#/definitions/FielderPosition"
+                },
+                "Fielder Character": {
+                    "$ref": "#/definitions/CharID"
+                },
+                "Fielder Action": {
+                    "$ref": "#/definitions/FielderAction"
+                },
+                "Fielder Jump": {
+                    "type": "integer"
+                },
+                "Fielder Swap": {
+                    "type": "integer"
+                },
+                "Fielder Manual Selected": {
+                    "$ref": "#/definitions/FielderManualSelected"
+                },
+                "Fielder Position - X": {
+                    "type": "number"
+                },
+                "Fielder Position - Y": {
+                    "type": "number"
+                },
+                "Fielder Position - Z": {
+                    "type": "number"
+                },
+                "Fielder Bobble": {
+                    "$ref": "#/definitions/FielderBobble"
+                }
+            },
+            "required": [
+                "Fielder Action",
+                "Fielder Bobble",
+                "Fielder Character",
+                "Fielder Jump",
+                "Fielder Manual Selected",
+                "Fielder Position",
+                "Fielder Position - X",
+                "Fielder Position - Y",
+                "Fielder Position - Z",
+                "Fielder Roster Location",
+                "Fielder Swap"
+            ],
+            "title": "FirstFielder"
+        },
+        "Runner": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Runner Roster Loc": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 8
+                },
+                "Runner Char Id": {
+                    "$ref": "#/definitions/CharID"
+                },
+                "Runner Initial Base": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4
+                },
+                "Out Type": {
+                    "$ref": "#/definitions/OutType"
+                },
+                "Out Location": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 255
+                },
+                "Steal": {
+                    "$ref": "#/definitions/Steal"
+                },
+                "Runner Result Base": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 255
+                }
+            },
+            "required": [
+                "Out Location",
+                "Out Type",
+                "Runner Char Id",
+                "Runner Initial Base",
+                "Runner Result Base",
+                "Runner Roster Loc",
+                "Steal"
+            ],
+            "title": "Runner"
+        },
+        "BattingHand": {
+            "type": "string",
+            "enum": [
+                "Left",
+                "Right"
+            ],
+            "title": "BattingHand"
+        },
+        "StickInput": {
+            "type": "string",
+            "enum": [
+                "Left",
+                "Right",
+                "Up",
+                "Down",
+                "Left+Up",
+                "Left+Down",
+                "Right+Up",
+                "Right+Down",
+                "",
+                "DELETE THE ONES BELOW THIS AFTER TESTING",
+                "Left+Right+Down+Up",
+                "Left+Right+Up",
+                "Left+Down+Up",
+                "Left+Right",
+                "Left+Right+Down",
+                "Down+Up",
+                "Right+Down+Up"
+            ]
+        },
+        "CharID": {
+            "type": "string",
+            "enum": [
+                "Baby Luigi", "Baby Mario", "Birdo", "Boo", "Bowser", "Bowser Jr", "Bro(B)", "Bro(F)", "Bro(H)",
+                "DK", "Daisy", "Diddy", "Dixie", "Dry Bones(B)", "Dry Bones(G)", "Dry Bones(Gy)", "Dry Bones(R)",
+                "Goomba", "King Boo", "Koopa(G)", "Koopa(R)", "Luigi", "Magikoopa(B)", "Magikoopa(G)", "Magikoopa(R)",
+                "Magikoopa(Y)", "Mario", "Monty", "Noki(B)", "Noki(G)", "Noki(R)", "Paragoomba", "Paratroopa(G)",
+                "Paratroopa(R)", "Peach", "Petey", "Pianta(B)", "Pianta(R)", "Pianta(Y)", "Shy Guy(B)", "Shy Guy(Bk)",
+                "Shy Guy(G)", "Shy Guy(R)", "Shy Guy(Y)", "Toad(B)", "Toad(G)", "Toad(P)", "Toad(R)", "Toad(Y)",
+                "Toadette", "Toadsworth", "Waluigi", "Wario", "Yoshi"
+            ],
+            "title": "CharID"
+        },
+        "ChargeType": {
+            "type": "string",
+            "enum": [
+                "N/A",
+                "Slider",
+                "Perfect"
+            ],
+            "title": "ChargeType"
+        },
+        "ContactResultPrimary": {
+            "type": "string",
+            "enum": [
+                "Foul",
+                "Out",
+                "Fair",
+                "Fielded",
+                "Unknown"
+            ],
+            "title": "ContactResultPrimary"
+        },
+        "ContactResultSecondary": {
+            "type": "string",
+            "enum": [
+                "Foul",
+                "Out-caught",
+                "Single",
+                "Double",
+                "HR",
+                "Batter safe, runner out",
+                "Out-tag",
+                "Ground ball double Play",
+                "foul",
+                "Bunt",
+                "Triple",
+                "SacFly",
+                "single",
+                "double",
+                "???",
+                "Error - Chem",
+                "triple",
+                "Error - Input"
+            ],
+            "title": "ContactResultSecondary"
+        },
+        "FielderAction": {
+            "type": "string",
+            "enum": [
+                "Sliding",
+                "None",
+                "Walljump",
+                "Inv-action",
+                "Jump"
+            ],
+            "title": "FielderAction"
+        },
+        "FielderBobble": {
+            "type": "string",
+            "enum": [
+                "None",
+                "Garlic knockout",
+                "Unknown",
+                "Fireball",
+                "Bobble",
+                "Fumble"
+            ],
+            "title": "FielderBobble"
+        },
+        "FielderManualSelected": {
+            "type": "string",
+            "enum": [
+                "No Selected Char",
+                "Selected This Char",
+                "Selected Other Char",
+                "Closest to Ball",
+                "Pitcher",
+                "Closest to Drop",
+                "Catcher"
+            ],
+            "title": "FielderManualSelected"
+        },
+        "FielderPosition": {
+            "type": "string",
+            "enum": [
+                "1B",
+                "2B",
+                "LF",
+                "C",
+                "CF",
+                "3B",
+                "SS",
+                "RF",
+                "P"
+            ],
+            "title": "FielderPosition"
+        },
+        "InputDirectionPushPull": {
+            "type": "string",
+            "enum": [
+                "None",
+                "Away From Batter",
+                "Towards Batter"
+            ],
+            "title": "InputDirectionPushPull"
+        },
+        "TypeOfContact": {
+            "type": "string",
+            "enum": [
+                "Sour - Right",
+                "Nice - Right",
+                "Nice - Left",
+                "Perfect",
+                "Sour - Left"
+            ],
+            "title": "TypeOfContact"
+        },
+        "PitchType": {
+            "type": "string",
+            "enum": [
+                "Curve",
+                "Charge",
+                "ChangeUp"
+            ],
+            "title": "PitchType"
+        },
+        "TypeOfSwing": {
+            "type": "string",
+            "enum": [
+                "None",
+                "Charge",
+                "Slap",
+                "Star",
+                "Bunt"
+            ],
+            "title": "TypeOfSwing"
+        },
+        "ResultOfAB": {
+            "type": "string",
+            "enum": [
+                "None",
+                "Caught",
+                "Single",
+                "Caught line-drive",
+                "Out",
+                "Bunt",
+                "Ground ball double Play",
+                "Double",
+                "Triple",
+                "HR",
+                "Strikeout",
+                "SacFly",
+                "Foul catch",
+                "Walk (BB)",
+                "Walk (HBP)",
+                "Error - Chem",
+                "Error - Input"
+            ],
+            "title": "ResultOfAB"
+        },
+        "OutType": {
+            "type": "string",
+            "enum": [
+                "None",
+                "Force",
+                "Force Back",
+                "Tag",
+                "Caught",
+                "Strike-out"
+            ],
+            "title": "OutType"
+        },
+        "Steal": {
+            "type": "string",
+            "enum": [
+                "None",
+                "Normal",
+                "Perfect",
+                "Ready"
+            ],
+            "title": "Steal"
+        }
+    }
+}
