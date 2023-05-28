@@ -6,7 +6,6 @@ from rich import pretty
 
 import memory_engine as me
 
-"""TYPE 'dme_functions' IN TERMINAL WINDOW TO GET LIST OF FUNCTIONS"""
 
 dme_functions = {}
 rich_functions = {}
@@ -23,6 +22,7 @@ locals().update(dme_functions)
 # locals().update(rich_functions)
 
 pretty.install()
+"""TYPE 'dme_functions' IN TERMINAL WINDOW TO GET LIST OF AVAILABLE FUNCTIONS"""
 
-"""Type 'locals()' or 'dir()' to get a list of available functions and active variables."""
+"""Type 'locals()' or 'dir()' to get a list of available functions and active variables. """
 code.interact(local=locals())
